@@ -44,3 +44,6 @@ C:\Users\inspe\Desktop\Security\CyberShark-SRC\CyberShark\bin\Debug\CyberShark.x
 C:\Users\inspe\Desktop\Security\CyberShark-SRC\CyberShark\obj\x86\Debug\CyberShark.Form1.resources
 C:\Users\inspe\Desktop\Security\CyberShark-SRC\CyberShark\obj\x86\Debug\CyberShark.Resources.resources
 C:\Users\inspe\Desktop\Security\CyberShark-SRC\CyberShark\obj\x86\Debug\CyberShark.vbproj.GenerateResource.Cache
+C:\Users\root\Documents\GitHub\SimpleKeylogger\CyberShark\obj\x86\Debug\CyberShark.exe
+C:\Users\root\Documents\GitHub\SimpleKeylogger\CyberShark\obj\x86\Debug\CyberShark.xml
+C:\Users\root\Documents\GitHub\SimpleKeylogger\CyberShark\obj\x86\Debug\CyberShark.pdb
